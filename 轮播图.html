@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  ul{
+	  	list-style: none;
+	  	margin: 0;
+	  	padding: 0;
+	  }
+		.box{
+			width: 750px;/*宽和高要和图片实际尺寸一样*/
+			height: 291px;
+			position: relative;
+			border: 10px solid orange;/*没必要加，只是为了边框练习明显*/
+			margin: 20px auto;/*只是为了练习时明显一点，没必要*/
+		}
+		.imgs{
+			position: absolute;/*绝对定位*/
+			display: flex;
+		}
+		.imgs img{
+			display:block;
+			/*vertical-align: middle;*/
+		}
+		.arrows span{
+			position: absolute;
+			top: 125px;/*调整位置，上下动*/
+			font-size: 36px;/*箭头的大小*/
+			background:#000;/*添加透明底色*/
+			color: #fff;
+			text-align: center;/*文字居中*/
+			width: 30px;
+			height: 40px;
+			line-height: 40px;
+			cursor: pointer;
+			opacity: 0;
+		}
+		.box:hover .arrows span{
+			opacity: .5;
+		}
+		.box .arrows span:hover{
+			opacity: 1;
+		}
+		.arrows .left{
+			left: 0;
+		}
+		.arrows .right{
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="carousel01" class="box">
+		<!--图片列表-->
+		<ul class="imgs">
+			<li><a href="#"><img src="images/01.jpg" alt="1"></a></li>
+			<li><a href="#"><img src="images/02.jpg" alt="2"></a></li>
+			<li><a href="#"><img src="images/03.jpg" alt="3"></a></li>
+			<li><a href="#"><img src="images/04.jpg" alt="4"></a></li>
+			<li><a href="#"><img src="images/05.jpg" alt="5"></a></li>
+		</ul>
+		<!--箭头(箭头英文是：arrow)-->
+		<div class="arrows">
+			<span class="left">&lt;</span>
+			<span class="right">&gt;</span>
+		</div>
+		<ul class="dots">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+</body>
+</html>
